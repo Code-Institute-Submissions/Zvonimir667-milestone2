@@ -1,0 +1,16 @@
+body {
+    background-color: #eee;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    color: #333;
+}
+
+
+
+.btn {
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    background-color: rgb(9, 255, 0);
+    color: #333;
+}
