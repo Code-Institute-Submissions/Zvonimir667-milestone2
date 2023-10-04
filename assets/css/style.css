@@ -5,7 +5,24 @@ body {
     color: #333;
 }
 
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
 
+/* --------- Game layout */
+
+.game-area {
+    background-color: blue
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
 
 .btn {
     width: 100px;
