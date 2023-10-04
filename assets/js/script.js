@@ -1,12 +1,9 @@
-const buttons = document.getElementsByTagName("button");
+const buttons = document.getElementsByClassName("btn");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
-const rock = "rock";
-const paper = "paper";
-const scissors = "scissors";
-const lizard = "lizard";
-const spock = "spock";
+
+
 
 for (let button of buttons) {
     button.addEventListener("click", function () {
@@ -20,11 +17,12 @@ function playGame(playerChoice) {
     let computerChoice = choices[computerChoiceIndex];
 
 
-    let result = checkWinner(playerChoice, computerChoice);
-
+    let result = checkWinner(choices[playerChoice], choices[computerChoice]);
 
     updateScores(result);
+
 }
+
 
 function checkWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
@@ -82,4 +80,15 @@ function checkWinner(playerChoice, computerChoice) {
     }
 };
 
-function updateScores
+function updateScores(result) {
+    if (result.includes("You Win")) {
+        playerScore.innerText = parseInt(playerScore.innerText) + 1;
+    } else if (result.includes("You Lose")) {
+        computerScore.innerText = parseInt(computerScore.innerText) + 1;
+    }
+    
+    // Display the result
+    document.querySelector('.result-area').innerHTML = result;
+}
+
+
