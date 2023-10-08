@@ -4,6 +4,7 @@ const computerScore = document.getElementById("computer-score");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const playerImage = document.getElementById("player-img");
 const computerImage = document.getElementById("computer-img");
+const winsToWinGame = 5;
 const choiceImages = {
     rock: "rock.png",
     paper: "paper.png",
@@ -11,6 +12,8 @@ const choiceImages = {
     lizard: "lizard.png",
     spock: "spock.png",
 };
+let playerWins = 0;
+let computerWins = 0;
 
 
 for (let button of buttons) {
@@ -101,15 +104,34 @@ function checkWinner(playerChoice, computerChoice) {
 
 function updateScores(result) {
     if (result.includes("You Win")) {
-        playerScore.innerText = parseInt(playerScore.innerText) + 1;
+        playerWins++;
     } else if (result.includes("You Lose")) {
-        computerScore.innerText = parseInt(computerScore.innerText) + 1;
+        computerWins++;
     } else {
 
     }
 
-    // Display the result
-    document.querySelector('.result-area').innerHTML = result;
+    playerScore.innerText = playerWins;
+    computerScore.innerText = computerWins;
+
+    if (playerWins === winsToWinGame) {
+        endGame("Player");
+    } else if (computerWins === winsToWinGame) {
+        endGame("Computer");
+    } else {
+
+        // Display the result
+        document.querySelector('.result-area').innerHTML = result;
+    }
 }
 
+function endGame(winner) {
+    document.querySelector('.result-area').innerHTML = `${winner} wins the game!`;
+
+    // Disable buttons to prevent further gameplay
+    for (let button of buttons) {
+        button.removeEventListener("click", playGame);
+        button.disabled = true;
+    }
+}
 
