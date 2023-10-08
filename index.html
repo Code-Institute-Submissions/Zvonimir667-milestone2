@@ -16,6 +16,7 @@
   <body>
     <h1 class="heading">Rock, Paper, Scissors, Lizard, Spock game</h1>
     <p>Choose one of the following:</p>
+
     <div class="game-area">
       <div class="button-area">
         <button aria-label="Rock" id="rock" data-choice="0" class="btn">
@@ -34,22 +35,38 @@
           Spock
         </button>
       </div>
+
       <div class="score-area">
-        <p>Player: <span id="player-score">0</span></p>
-        <p>Computer: <span id="computer-score">0</span></p>
+        <div id="player">
+          <p>Player: <span id="player-score">0</span></p>
+          <img
+            src="assets/images/rpsls.png"
+            alt="Rock Paper Scissors Lizard Spock"
+          />
+        </div>
+        <div id="computer">
+          <p>Computer: <span id="computer-score">0</span></p>
+          <img
+            src="assets/images/rpsls.png"
+            alt="Rock Paper Scissors Lizard Spock"
+          />
+        </div>
       </div>
       <div class="image-area"></div>
       <div class="result-area"></div>
-      <div class="rules-area">
-        <p>Rules:</p>
-        <p>
-          Scissors cuts paper. Paper covers rock. Rock crushes lizard. Lizard
-          poisons Spock. Spock smashes scissors. Scissors decapitates lizard.
-          Lizard eats paper. Paper disproves Spock. Spock vaporizes rock. Rock
-          crushes scissors.
-        </p>
-      </div>
-    </div>
+      
+    <footer>
+        <div class="rules-area">
+            <p>Rules:</p>
+            <p>
+                Scissors cuts paper. Paper covers rock. Rock crushes lizard. Lizard
+                poisons Spock. Spock smashes scissors. Scissors decapitates lizard.
+                Lizard eats paper. Paper disproves Spock. Spock vaporizes rock. Rock
+                crushes scissors.
+            </p>
+        </div>
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
   </body>

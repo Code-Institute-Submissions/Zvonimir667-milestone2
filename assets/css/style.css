@@ -24,6 +24,25 @@ body {
     padding: 1%;
 }
 
+.score-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#player {
+    background-color: white;
+    float: left;
+    width: 40%;
+}
+
+#computer {
+    background-color: white;
+    float: right;
+    width: 40%;
+}
+
 .btn {
     width: 100px;
     height: 30px;
