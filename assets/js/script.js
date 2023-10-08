@@ -4,7 +4,13 @@ const computerScore = document.getElementById("computer-score");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const playerImage = document.getElementById("player-img");
 const computerImage = document.getElementById("computer-img");
-
+const choiceImages = {
+    rock: "rock.png",
+    paper: "paper.png",
+    scissors: "scissors.png",
+    lizard: "lizard.png",
+    spock: "spock.png",
+};
 
 
 for (let button of buttons) {
@@ -15,18 +21,21 @@ for (let button of buttons) {
 }
 
 function playGame(playerChoice) {
+    console.log("Player Choice:", playerChoice);
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
 
     let computerChoiceIndex = Math.floor(Math.random() * 5);
     let computerChoice = choices[computerChoiceIndex];
+    console.log("Computer Choice:", computerChoice);
 
     computerImage.src = `assets/images/${choices[computerChoiceIndex]}.png`;
     computerImage.alt = choices[computerChoiceIndex];
 
 
-    let result = checkWinner(choices[playerChoice], choices[computerChoice]);
+    let result = checkWinner(choices[playerChoice], choices[computerChoiceIndex]);
+    console.log("Result:", result);
 
     updateScores(result);
 
@@ -35,65 +44,68 @@ function playGame(playerChoice) {
 
 function checkWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
-        return "The computer also chose " + computerChoice + ":" + "<br>" + "the result is a tie!";
+        return "Result is a tie!";
     } else if (playerChoice === "rock") {
         if (computerChoice === "paper") {
-            return "paper covers rock <br> You Lose";
+            return "Paper covers rock <br> You Lose";
         } else if (computerChoice === "scissors") {
-            return "rock crushes scissors <br> You Win!";
+            return "Rock crushes scissors <br> You Win!";
         } else if (computerChoice === "lizard") {
-            return "rock crushes lizard <br> You Win!";
+            return "Rock crushes lizard <br> You Win!";
         } else {
-            return "spock vaporizes rock <br> You Lose";
+            return "Spock vaporizes rock <br> You Lose";
         }
+
     } else if (playerChoice === "paper") {
         if (computerChoice === "rock") {
-            return "paper covers rock <br> You Win!";
+            return "Paper covers rock <br> You Win!";
         } else if (computerChoice === "scissors") {
-            return "scissors cut paper <br> You Lose";
+            return "Scissors cut paper <br> You Lose";
         } else if (computerChoice === "lizard") {
-            return "lizard eats paper <br> You Lose";
+            return "Lizard eats paper <br> You Lose";
         } else {
-            return "paper disproves spock <br> You Win!";
+            return "Paper disproves Spock <br> You Win!";
         }
     } else if (playerChoice === "scissors") {
         if (computerChoice === "rock") {
-            return "rock crushes scissors <br> You Lose";
+            return "Rock crushes scissors <br> You Lose";
         } else if (computerChoice === "paper") {
-            return "scissors cut paper <br> You Win!";
+            return "Scissors cut paper <br> You Win!";
         } else if (computerChoice === "lizard") {
-            return "scissors decapitate lizard <br> You Win!";
+            return "Scissors decapitate lizard <br> You Win!";
         } else {
-            return "spock smashes scissors <br> You Lose";
+            return "Spock smashes scissors <br> You Lose";
         }
     } else if (playerChoice === "lizard") {
         if (computerChoice === "rock") {
-            return "rock crushes lizard <br> You Lose";
+            return "Rock crushes lizard <br> You Lose";
         } else if (computerChoice === "paper") {
-            return "lizard eats paper <br> You Win!";
+            return "Lizard eats paper <br> You Win!";
         } else if (computerChoice === "scissors") {
-            return "scissors decapitate lizard <br> You Lose";
+            return "Scissors decapitate lizard <br> You Lose";
         } else {
-            return "lizard poisons spock <br> You Win!";
+            return "Lizard poisons Spock <br> You Win!";
         }
     } else if (playerChoice === "spock") {
         if (computerChoice === "rock") {
-            return "spock vaporizes rock <br> You Win!";
+            return "Spock vaporizes rock <br> You Win!";
         } else if (computerChoice === "paper") {
-            return "paper disproves spock <br> You Lose";
+            return "Paper disproves Spock <br> You Lose";
         } else if (computerChoice === "scissors") {
-            return "spock smashes scissors <br> You Win!";
+            return "Spock smashes scissors <br> You Win!";
         } else {
-            return "lizard poisons spock <br> You Lose";
+            return "Lizard poisons Spock <br> You Lose";
         }
     }
-};
+}
 
 function updateScores(result) {
     if (result.includes("You Win")) {
         playerScore.innerText = parseInt(playerScore.innerText) + 1;
     } else if (result.includes("You Lose")) {
         computerScore.innerText = parseInt(computerScore.innerText) + 1;
+    } else {
+
     }
 
     // Display the result
