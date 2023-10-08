@@ -13,7 +13,7 @@ body {
 /* --------- Game layout */
 
 .game-area {
-    background-color: blue
+    background-color: rgba(38, 40, 49, 0.253);
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
