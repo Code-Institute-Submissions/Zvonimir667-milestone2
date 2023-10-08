@@ -10,7 +10,7 @@ body {
     font-size: 2.5rem;
 }
 
-/* --------- Game layout */
+/*  Game layout */
 
 .game-area {
     background-color: rgba(38, 40, 49, 0.253);
@@ -20,6 +20,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+    border-radius: 10px;
 }
 
 .score-area {
@@ -41,6 +42,13 @@ body {
     width: 40%;
 }
 
+.result-area {
+    font-size: 150%;
+    color: rgb(255, 0, 0);
+}
+
+/* Buttons */
+
 .btn {
     width: 100px;
     height: 30px;
@@ -54,18 +62,19 @@ body {
     color: white;
 }
 
+/* Media querries */
+
 @media (max-width: 450px) {
 
     #player {
-        width: 80%;
-        height: 80%;
+        width: 100%;
         float: left;
         padding: 5px;
+        margin: 0 auto;
     }
 
     #computer {
-        width: 80%;
-        height: 80%;
+        width: 100%;
         float: left;
         padding: 5px;
     }

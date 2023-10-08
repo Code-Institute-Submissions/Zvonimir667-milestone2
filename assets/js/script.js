@@ -5,13 +5,6 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const playerImage = document.getElementById("player-img");
 const computerImage = document.getElementById("computer-img");
 const winsToWinGame = 5;
-const choiceImages = {
-    rock: "rock.png",
-    paper: "paper.png",
-    scissors: "scissors.png",
-    lizard: "lizard.png",
-    spock: "spock.png",
-};
 let playerWins = 0;
 let computerWins = 0;
 
