@@ -1,6 +1,7 @@
 # Rock, Paper, Scissors, Lizard, Spock game
 
-Something about the site
+Rock, Paper, Scissors, Lizard, Spock is a game of chance that expands the traditional game of Rock, Paper, Scissors.
+The game was originally created by Sam Kass with Karen Bryla. Users can have fun with this extended traditional game playing against computer and learning new rules for the game.
 
 ## Features
 
@@ -33,7 +34,7 @@ Something about the site
 ### Validator testing
 
 - HTML
-  -  No errors were returned when passing through the official W3C validator.
+  - No errors were returned when passing through the official W3C validator.
 
 ![Screenshot of testing1](/assets/images/validator1.png)
 
@@ -46,16 +47,16 @@ Something about the site
   - No errors were foubd when passing through the JSHint JavaScript validator.
 
 - Lighthouse testing
-  - For desktop testing results are as follows: 
+  - For desktop testing results are as follows:
 
 ![Screenshot of lighthouse testing1](/assets/images/testing1.png)
 
-  - For mobile testing results are as follows:
+- For mobile testing results are as follows:
 
 ![Screenshot of lighthouse testing2](/assets/images/testing3.png)
 
 - WAVE testing
-  - Also I did a WAVE testing 
+  - Also I did a WAVE testing
 
 ![Screenshot of WAVE testing](/assets/images/testing4.png)
 
@@ -65,10 +66,10 @@ Something about the site
 
 ![Error1](/assets/images/error0.png)
 
-  - When creating a game I encounter a problem with result. My code for result was 
-    - `let result = checkWinner(playerChoice, computerChoice);`
-  - Fixed the problem with a code
-    - `let result = checkWinner(choices[playerChoice], choices[computerChoice]);`
+- When creating a game I encounter a problem with result. My code for result was
+  - `let result = checkWinner(playerChoice, computerChoice);`
+- Fixed the problem with a code
+  - `let result = checkWinner(choices[playerChoice], choices[computerChoice]);`
 
 ![Error2](/assets/images/error1.png)
 ![Error3](/assets/images/error2.png)
@@ -79,7 +80,7 @@ Something about the site
 
 - There were no usolved bugs
 
-## Deployment 
+## Deployment
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
   - In the GitHub repository, navigate to the Settings tab
@@ -93,8 +94,10 @@ The live link can be found here - <https://zvonimir667.github.io/milestone2/>
 ## Credits
 
 ### Code used
+
 - The structure for the code and the game was inspired by Love Maths project particularly HTML and CSS, and JavaScript was written mostly by trial and error until satisfactory result.
-- Fonts used are from [Google Fonts](https://fonts.google.com/)
+- Fonts used are from [Google Fonts](https://fonts.google.com/).
 
 ### Media
+
 - The images for this project are taken from the [puzzlewocky site](https://puzzlewocky.com/parlor-games/rock-paper-scissors-lizard-spock/)

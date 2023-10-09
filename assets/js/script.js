@@ -16,6 +16,9 @@ for (let button of buttons) {
     });
 }
 
+/**
+ * The main game function
+ */
 function playGame(playerChoice) {
     console.log("Player Choice:", playerChoice);
 
@@ -37,7 +40,9 @@ function playGame(playerChoice) {
 
 }
 
-
+/**
+ * Cheks who won depending on choices for user and computer
+ */
 function checkWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         return "Result is a tie!";
@@ -95,6 +100,9 @@ function checkWinner(playerChoice, computerChoice) {
     }
 }
 
+/**
+ * Updates the scores for user and computer
+ */
 function updateScores(result) {
     if (result.includes("You Win")) {
         playerWins++;
@@ -118,6 +126,9 @@ function updateScores(result) {
     }
 }
 
+/**
+ * Determines who is winner and end game
+ */
 function endGame(winner) {
     document.querySelector('.result-area').innerHTML = `${winner} wins the game!`;
 
